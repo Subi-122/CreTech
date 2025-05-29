@@ -1,0 +1,13 @@
+# Android Studio specific files
+.idea/
+.gradle/
+local.properties
+
+# Build output
+/build/
+*/build/
+
+# Misc
+.DS_Store
+*.iml
+ToDoListApplication/
