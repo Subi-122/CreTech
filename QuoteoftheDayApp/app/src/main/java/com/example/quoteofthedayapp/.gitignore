@@ -1,0 +1,84 @@
+# Kotlin
+*.class
+*.kt~
+*.kts~
+*.log
+
+# IntelliJ/Android Studio
+.idea/
+*.iml
+.gradle/
+local.properties
+*.hprof
+
+# Build output
+/build/
+*/build/
+
+# Generated files
+captures/
+output.json
+
+# Keystore files (security)
+*.jks
+*.keystore
+
+# External native build folder generated in Android Studio 2.2+.
+.externalNativeBuild
+
+# NDK
+.cxx/
+
+# Google Services (you'll need to add this manually later)
+google-services.json
+
+# Mac OS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Log files
+*.log
+
+# Dependency caches
+.gradle/
+**/build/
+**/out/
+
+# Android Studio Navigation JSON
+.navigation/
+
+# Firebase Crashlytics
+fabric.properties
+
+# Local config files
+local.properties
+
+# Android Studio Profiling files
+*.hprof
+
+# Miscellaneous
+*.swp
+*.swo
+
+# Packaging files
+*.jar
+*.war
+*.ear
+
+# Jetpack Compose generated files
+.compose-cache/
+
+# Fastlane metadata
+fastlane/report.xml
+fastlane/screenshots
+fastlane/test_output
+
+# Others
+*.orig
+
+# Test reports
+test-results/
