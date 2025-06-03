@@ -13,8 +13,8 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.example.quoteofthedayapp.ui.BookmarksScreen
-import com.example.quoteofthedayapp.ui.QuoteOfTheDayScreen
-import com.example.quoteofthedayapp.ui.theme.QuoteOfTheDayAppTheme
+import com.example.quoteofthedayapp.ui.QuoteofTheDayScreen
+import com.example.quoteofthedayapp.ui.theme.QuoteofTheDayAppTheme
 
 class MainActivity : ComponentActivity() {
     private val viewModel: QuoteViewModel by viewModels()
@@ -31,7 +31,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            QuoteOfTheDayAppTheme {
+            QuoteofTheDayAppTheme {
                 var selectedScreen by remember { mutableStateOf(0) }
 
                 Scaffold(
@@ -58,9 +58,9 @@ class MainActivity : ComponentActivity() {
                             .fillMaxSize()
                     ) {
                         when (selectedScreen) {
-                            0 -> QuoteOfTheDayScreen(viewModel)
+                            0 -> QuoteofTheDayScreen(viewModel)
                             1 -> BookmarksScreen(viewModel)
-                            else -> QuoteOfTheDayScreen(viewModel) // Fallback for safety
+                            else -> QuoteofTheDayScreen(viewModel) // Fallback for safety
                         }
                     }
                 }

@@ -15,17 +15,26 @@ import android.content.Intent
 import com.example.quoteofthedayapp.Quote
 
 
-
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun BookmarksScreen(viewModel: QuoteViewModel) {
-    val bookmarkedQuotes = viewModel.bookmarkedQuotes.collectAsState().value
-    val context = LocalContext.current
+    val bookmarks = viewModel.bookmarkedQuotes.collectAsState().value
+    val context = LocalContext.current // Get context once here
 
-    if (bookmarkedQuotes.isEmpty()) {
-        Text("No bookmarked quotes yet.", modifier = Modifier.padding(16.dp))
-    } else {
-        LazyColumn(modifier = Modifier.fillMaxSize())  {
-            items(bookmarkedQuotes) { quote ->
+    Scaffold(
+        topBar = {
+            TopAppBar(
+                title = { Text("Bookmarked Quotes") }
+            )
+        }
+    ) { paddingValues ->
+        LazyColumn(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(paddingValues)
+                .padding(16.dp)
+        ) {
+            items(bookmarks) { quote ->
                 QuoteCard(
                     quote = quote,
                     onBookmarkClick = { viewModel.toggleBookmarkFor(quote) },
